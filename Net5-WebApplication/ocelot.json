@@ -1,0 +1,107 @@
+{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/Back/api/Auth/UserAuthentication",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "appweb.calidda.com.pe",
+          "Port": 443
+        }
+      ],
+      "UpstreamPathTemplate": "/Ocelot/api/Auth/UserAuthentication",
+      "UpstreamHttpMethod": [
+        "Post"
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "BasicAuthentication",
+        "AllowedScopes": []
+      },
+      "RateLimitOptions": {
+        "ClientWhitelist": [],
+        "EnableRateLimiting": true,
+        "Period": "5s",
+        "PeriodTimespan": 15,
+        "Limit": 2000
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/Back/api/EvaluacionCrediticia/InsertRegistroBP",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "appweb.calidda.com.pe",
+          "Port": 443
+        }
+      ],
+      "UpstreamPathTemplate": "/Ocelot/api/EvaluacionCrediticia/InsertRegistroBP",
+      "UpstreamHttpMethod": [
+        "Post"
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "BasicAuthentication",
+        "AllowedScopes": []
+      },
+      "RateLimitOptions": {
+        "ClientWhitelist": [],
+        "EnableRateLimiting": true,
+        "Period": "5s",
+        "PeriodTimespan": 15,
+        "Limit": 2000
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/Back/api/SalesOrder/ResponseSalesOrder",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "appweb.calidda.com.pe",
+          "Port": 443
+        }
+      ],
+      "UpstreamPathTemplate": "/Ocelot/api/SalesOrder/ResponseSalesOrder",
+      "UpstreamHttpMethod": [
+        "Post"
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "BasicAuthentication",
+        "AllowedScopes": []
+      },
+      "RateLimitOptions": {
+        "ClientWhitelist": [],
+        "EnableRateLimiting": true,
+        "Period": "5s",
+        "PeriodTimespan": 15,
+        "Limit": 2000
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/Back/api/EvaluacionCrediticia/LiberacionCreditos",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "appweb.calidda.com.pe",
+          "Port": 443
+        }
+      ],
+      "UpstreamPathTemplate": "/Ocelot/api/EvaluacionCrediticia/LiberacionCreditos",
+      "UpstreamHttpMethod": [
+        "Post"
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "BasicAuthentication",
+        "AllowedScopes": []
+      },
+      "RateLimitOptions": {
+        "ClientWhitelist": [],
+        "EnableRateLimiting": true,
+        "Period": "5s",
+        "PeriodTimespan": 15,
+        "Limit": 2000
+      }
+    }
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "https://10.10.99.73:44366"
+  }
+}
