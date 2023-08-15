@@ -50,7 +50,7 @@ namespace Net5_WebApplication
             {
                 app.UseDeveloperExceptionPage();
             }
-
+            app.UseHttpsRedirection();
             app.UseRouting();
             app.UseCors("AllowAnyOrigins");
             app.UseAuthorization();
